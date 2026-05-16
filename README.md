@@ -8,7 +8,8 @@ Fetches **live exchange rates** from a free public API with no API key required.
 
 ## 📸 Preview
 
-<img width="672" height="1017" alt="image" src="https://github.com/user-attachments/assets/4e449128-2cea-4a2e-a916-8a8a2814ff6f" />
+<img width="675" height="1031" alt="image" src="https://github.com/user-attachments/assets/7ed9978c-1b1e-48ac-8226-4aab32dd7de2" />
+
 
 
 ---
