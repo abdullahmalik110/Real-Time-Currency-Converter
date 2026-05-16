@@ -1,84 +1,188 @@
-# Real-Time Currency Converter — C++ Qt (No libcurl needed)
+# 💱 Real-Time Currency Converter
 
-A clean desktop currency converter using **Qt Network** only.
-No libcurl. No extra DLLs. Just Qt.
+A fully functional desktop **Currency Converter** built in **C++** with a **Qt GUI** — developed as an Object-Oriented Programming (OOP) semester project at **UET**.
 
----
-
-## Features
-- Live exchange rates (170+ currencies)
-- Auto-refreshes every 60 seconds
-- Swap button to flip currencies
-- 8 quick-pair buttons
-- Conversion history (last 12)
-- Copy result to clipboard
-- Works on Windows, macOS, Linux
+Fetches **live exchange rates** from a free public API with no API key required.
 
 ---
 
-## Project Structure
+## 📸 Preview
+
+> *(Add a screenshot of your app here)*
+
+---
+
+## ✨ Features
+
+- 🌐 **Live exchange rates** — fetched from free public API
+- 💱 **170+ currencies** — USD, PKR, EUR, GBP, AED, SAR, JPY and more
+- 🔄 **Auto-refreshes** every 60 seconds
+- ⇅ **Swap button** — instantly reverse currencies
+- ⚡ **8 Quick-pair buttons** — one click for common conversions
+- 📋 **Conversion history** — tracks your last 12 conversions
+- 📎 **Copy to clipboard** — copy result with one click
+- 🎨 **Clean modern UI** — built with Qt Fusion style
+- ✅ **No libcurl needed** — uses Qt's built-in network module
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| C++17 | Core programming language |
+| Qt 6 (Widgets + Network) | GUI framework & HTTP requests |
+| nlohmann/json | JSON parsing (single header) |
+| fawazahmed0/currency-api | Free live exchange rate API |
+
+---
+
+## 📐 OOP Concepts Applied
+
+| Concept | Where Used |
+|---|---|
+| **Classes & Objects** | `MainWindow`, `ApiFetcher` |
+| **Encapsulation** | API logic fully isolated in `ApiFetcher` |
+| **Abstraction** | `MainWindow` doesn't know HOW rates are fetched |
+| **Inheritance** | Inherits from `QMainWindow`, `QObject` |
+| **Signals & Slots** | Qt's event-driven OOP communication pattern |
+| **Single Responsibility** | Each class has one clear job |
+
+---
+
+## 📁 Project Structure
 
 ```
-currency_converter_v2/
+currency_converter/
 ├── src/
-│   ├── main.cpp
-│   ├── mainwindow.h
-│   ├── mainwindow.cpp
-│   ├── apifetcher.h
-│   └── apifetcher.cpp
+│   ├── main.cpp           ← App entry point
+│   ├── mainwindow.h       ← Main window class declaration
+│   ├── mainwindow.cpp     ← UI layout, styling, and logic
+│   ├── apifetcher.h       ← API fetcher class declaration
+│   └── apifetcher.cpp     ← HTTP requests + JSON parsing
 ├── libs/
-│   └── json.hpp          ← DOWNLOAD THIS (see Step 1 below)
-├── assets/
-├── build/
+│   └── json.hpp           ← nlohmann/json (download separately)
+├── assets/                ← App icons / images
+├── build/                 ← Compiled output (auto-generated)
 ├── README.md
-└── currency_converter.pro
+└── currency_converter.pro ← Qt project file
 ```
 
 ---
 
-## STEP 1 — Download json.hpp (ONE TIME ONLY)
+## ⚙️ Installation & Build
 
-Open this URL in your browser and save the file to the libs\ folder:
+### Requirements
 
+- [Qt 6](https://www.qt.io/download-open-source) (with MinGW 64-bit on Windows)
+- [nlohmann/json](https://github.com/nlohmann/json/releases/download/v3.11.3/json.hpp) single header
+
+### Step 1 — Clone the repo
+
+```bash
+git clone https://github.com/YOUR_USERNAME/currency-converter.git
+cd currency-converter
+```
+
+### Step 2 — Download json.hpp
+
+Download and place in the `libs/` folder:
+
+```bash
+# Linux / macOS
+curl -L -o libs/json.hpp \
   https://github.com/nlohmann/json/releases/download/v3.11.3/json.hpp
+```
 
-Save it as:  currency_converter_v2\libs\json.hpp
+**Windows** — open this URL in your browser and save to `libs\json.hpp`:
+```
+https://github.com/nlohmann/json/releases/download/v3.11.3/json.hpp
+```
+
+### Step 3 — Build
+
+**Qt Creator (All platforms):**
+1. Open `currency_converter.pro` in Qt Creator
+2. Click **Configure Project**
+3. Press `Ctrl + B` to build
+4. Press `Ctrl + R` to run
+
+**Linux / macOS Terminal:**
+```bash
+cd build
+qmake ../currency_converter.pro
+make -j4
+./CurrencyConverter
+```
+
+**Windows (Qt MinGW Terminal):**
+```cmd
+cd build
+qmake ..\currency_converter.pro
+mingw32-make
+CurrencyConverter.exe
+```
 
 ---
 
-## STEP 2 — Install Qt (if not installed)
+## 🌐 API Used
 
-Download from: https://www.qt.io/download-open-source
-During install select:
-  [x] Qt 6.x latest
-  [x] MinGW 64-bit
-  [x] Qt Creator
+**[fawazahmed0/currency-api](https://github.com/fawazahmed0/exchange-api)**
 
----
+- ✅ Completely free
+- ✅ No API key required
+- ✅ 170+ currencies
+- ✅ Updates daily
 
-## STEP 3 — Open in Qt Creator
+**Endpoint used:**
+```
+https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json
+```
 
-1. Open Qt Creator
-2. File -> Open File or Project
-3. Select: currency_converter.pro
-4. Click Configure Project
-5. Press Ctrl+B to Build
-6. Press Ctrl+R to Run
-
----
-
-## NO libcurl needed!
-
-This version uses Qt's built-in QNetworkAccessManager.
-You do NOT need to install libcurl or any extra libraries.
+**Rate conversion formula:**
+```
+result = amount × (toRate / fromRate)
+```
+All rates are relative to USD as the base currency.
 
 ---
 
-## Troubleshooting
+## 🐛 Troubleshooting
 
-| Error                    | Fix                                      |
-|--------------------------|------------------------------------------|
-| json.hpp not found       | Download it (see Step 1)                 |
-| Qt not found             | Add Qt bin folder to your PATH           |
-| Network error at runtime | Check your internet connection           |
-| Build errors on Qt 5     | Change #include path or upgrade to Qt 6  |
+| Problem | Solution |
+|---|---|
+| `json.hpp not found` | Download it and place in `libs/` folder |
+| `QNetworkAccessManager` error | Make sure `network` is in your `.pro` QT modules |
+| App shows "Network error" | Check your internet connection |
+| Blank result on conversion | Wait for rates to load (status bar shows progress) |
+| Build fails on Qt 5 | Upgrade to Qt 6 or adjust `#include` paths |
+
+---
+
+## 📚 What I Learned
+
+- Applying **OOP design principles** in a real C++ project
+- Using **Qt Signals & Slots** for event-driven programming
+- Making **HTTP requests** and parsing **JSON** in C++
+- Separating **business logic** from **UI logic**
+- Building and deploying a **cross-platform desktop application**
+
+---
+
+## 👨‍💻 Author
+
+**Abdullah Malik**
+Student @ University of Engineering & Technology (UET)
+Object-Oriented Programming — Semester Project
+
+---
+
+## 📄 License
+
+This project is open source under the [MIT License](LICENSE).
+
+---
+
+## ⭐ Show Your Support
+
+If you found this project helpful, please give it a **star** ⭐ on GitHub!
