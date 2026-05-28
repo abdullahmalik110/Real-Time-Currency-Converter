@@ -240,7 +240,7 @@ build\CurrencyConverter.exe      # Windows
 |--------|-------|-------------|
 | **Kashmalah Kabir** | `main.cpp`, `basefetcher.h`, `apifetcher.h/.cpp` | Abstraction, Inheritance, Dynamic Polymorphism, Static Polymorphism |
 | **Haleema Sadia** | `currencyconverter.h` | Encapsulation, Static Polymorphism |
-| **Muhammad Abdullah zulfiqar ** | `conversionrecord.h`, `historymanager.h` | Encapsulation, File Handling, Static Polymorphism |
+| **Muhammad Abdullah Zulfiqar** | `conversionrecord.h`, `historymanager.h` | Encapsulation, File Handling, Static Polymorphism |
 | **Raghib ullah Khan** | `mainwindow.h`, `mainwindow.cpp` | Inheritance, Dynamic Polymorphism, GUI |
 
 > See [`MEMBER_DIVISION.md`](./MEMBER_DIVISION.md) for the detailed breakdown of each member's contribution, the specific functions they wrote, and viva preparation notes.
