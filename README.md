@@ -8,10 +8,10 @@
 
 | Member | Contribution |
 |---|---|
-| **Member 1 — [Name]** | `BaseFetcher`, `ApiFetcher` — Abstraction, Inheritance, Dynamic Polymorphism |
-| **Member 2 — [Name]** | `CurrencyConverter` — Static Polymorphism, overloaded convert()/format() |
-| **Member 3 — [Name]** | `HistoryManager`, `ConversionRecord` — Encapsulation, File Handling |
-| **Member 4 — [Name]** | `MainWindow`, `main.cpp` — GUI, wiring all components, QSS styling |
+| **Member 1 — [Kashmalah Kabir]** | `BaseFetcher`, `ApiFetcher` — Abstraction, Inheritance, Dynamic Polymorphism |
+| **Member 2 — [Haleema Sadia]** | `CurrencyConverter` — Static Polymorphism, overloaded convert()/format() |
+| **Member 3 — [Abdullah Malik]** | `HistoryManager`, `ConversionRecord` — Encapsulation, File Handling |
+| **Member 4 — [Raghib Ullah Khan]** | `MainWindow`, `main.cpp` — GUI, wiring all components, QSS styling |
 
 > Each member is a contributor on this repo. See the commit history for verification.
 
