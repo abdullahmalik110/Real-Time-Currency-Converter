@@ -347,7 +347,7 @@ void MainWindow::setupUI() {
 
     // ── Footer credit ─────────────────────────────────────────────────────────
     QLabel* footer = new QLabel(
-        "\xc2\xa9 Created by Abdullah Malik  |  OOP Lab Project", this);
+        "\xc2\xa9 Created by Group 10  |  OOP Lab Project", this);
     footer->setAlignment(Qt::AlignCenter);
     footer->setObjectName("footerLabel");
     root->addWidget(footer);
