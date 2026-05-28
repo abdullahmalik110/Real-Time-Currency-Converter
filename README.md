@@ -254,7 +254,7 @@ build\CurrencyConverter.exe      # Windows
 | [Member 1 Name] | [🔗 Watch Demo]() |
 | [Member 2 Name] | [🔗 Watch Demo]() |
 | Muhammad Abdullah Zulfiqar | [🔗 Watch Demo](https://www.linkedin.com/posts/abdullah-malik-06072b382_softwareengineering-uet-cplusplus-ugcPost-7465861207841923072-1WAg/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF5voIgBRTF_7ywuPIqS8pNyhn1bLuZ7XdI) |
-| [Raghib Ullah Khan] | [🔗 Watch Demo]() |
+| [Raghib Ullah Khan] | [🔗 Watch Demo](https://www.linkedin.com/posts/raghib-ullah-khan-08432b370_currency-converter-20-a-clean-and-modern-ugcPost-7465907162444292096-TbFD/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFvikKQB5CyuJuX5d1_NF_XcPSGTGPOtMek) |
 
 ---
 
