@@ -4,7 +4,7 @@
 
 ### A desktop currency converter built with C++ and Qt Framework
 
-**Created by Abdullah Malik**
+**Created by GROUP 10**
 
 ![C++](https://img.shields.io/badge/C++-17-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Qt](https://img.shields.io/badge/Qt-6.x%20%7C%205.15+-41CD52?style=for-the-badge&logo=qt&logoColor=white)
@@ -278,6 +278,6 @@ This project is created for educational purposes as part of an OOP Lab course.
 ---
 
 <div align="center">
-  <b>Created by Abdullah Malik</b><br>
+  <b>Created by GROUP 10</b><br>
   OOP Lab Project — C++ & Qt
 </div>
